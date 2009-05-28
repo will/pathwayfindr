@@ -1,0 +1,161 @@
+
+.prog-border {
+  height: 15px;
+  width: 205px;
+  background: #fff;
+  border: 1px solid silver;
+  margin: 0;
+  padding: 0;
+  padding-right: 4px;
+}
+
+.prog-bar {
+  height: 11px;
+  margin: 2px;
+  padding: 0;
+/*  background: #C9DDEC;*/
+  background: #799775;
+}
+
+
+	
+	body {
+		margin:0px 0px 0px 0px;
+		background: #487890;
+		font-family: Helvetica, Veranda, Arial, sans-serif;
+		}
+	
+	#leftcontent {
+		float:left;
+		width:750px;
+		background:#fff;
+		border-right:2px solid #000;
+		border-bottom:2px solid #000;
+		margin-right:15px;
+		padding-bottom:20px;
+		padding-left: 10px;
+		}
+
+	#rightcontent {
+	  width: 1000px;
+	  color: white;
+		}
+		
+	p,pre {
+		margin:0px 10px 10px 10px;
+		}
+		
+  #rightcontent h1 {
+    color: white;
+    font-family: Veranda, Helvetica, Arial, sans-serif;
+  }
+	
+	#rightcontent h3 {
+		font-size:16px;
+		margin-left:0px;
+		font-family: Veranda, Helvetica, Arial, sans-serif;
+		}
+		
+	#rightcontent p {
+	  font-size: 12px;
+  }
+  
+  #images img
+  {
+    border: 0px;
+  }
+  
+
+
+
+  .groups td {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid white;
+  }
+  
+   #header td {
+    color: white;
+    border: 0px;
+  }
+  
+  A {
+    color: #487890;
+    text-decoration: none;
+  }
+  A:hover {
+    text-decoration: underline;
+  }
+  #wrapper a {
+    color: #E3BFC3;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  
+  #wrapper a:hover {
+    text-decoration: underline;
+  }
+  
+  #sidebar {
+    margin-top: 45px;
+    margin-left: 10px;
+  }
+ 
+  p#tagline
+  {
+    font-size: 16px;
+  }
+  
+  #wrapper{
+    position: absolute;
+    left: 780px;
+    width: 300px;
+    top: 0px;
+  }
+  
+  div.warning{
+    padding-top: 20px;
+  }
+  
+  .warning{
+    margin: 10px;
+    border: 2px solid red;
+    padding: 5px;
+    width: 60%;
+  }
+  
+  .result
+  {
+    margin-bottom: 60px;
+  }
+  
+  .result ul{
+    list-style: none;
+  }
+  
+  .result h4{
+    border-bottom: 1px solid #999;
+  }
+  
+  .genelist{
+    font-family: "Bitstream Vera Sans Mono", monospace;
+    font-size: 0.9em;
+  }
+  
+  .example {
+    font-family: "Bitstream Vera Sans Mono", monospace;
+    font-size: 0.9em;
+    margin: 20px;
+    border: 1px dotted black;
+  }
+
+  .example td{
+    padding-right: 40px;
+  }
+  
+  .about h2{
+    border-bottom: 1px solid #999;
+  }

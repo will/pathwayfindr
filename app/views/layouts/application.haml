@@ -1,0 +1,15 @@
+%html
+  %head
+    %title Pathwayfindr
+    = javascript_include_tag :all
+    = stylesheet_link_tag :all
+  %body
+    #leftcontent
+      = yield
+      %p &nbsp;
+      %p &nbsp;
+      %p &nbsp;
+    #rightcontent
+      #wrapper
+        %h1 pathwayfindr
+        = yield :sidebar

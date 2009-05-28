@@ -1,0 +1,82 @@
+%h1 Manual
+
+.about
+  %h2 About Pathwayfindr
+  %p
+    Pathwayfindr is a tool which allows users to make customized maps of cellular signaling pathways.  
+  %h2 Input File Format
+  %p 
+    The input file should be a tab separated file. The first column should be a single gene id, and the second column a group. The group can be anything you wish, up to 10 different groups. For example:
+    %table.example
+      %tr
+        %td hsa:5170
+        %td group a
+        %td This column
+      %tr
+        %td hsa:2255
+        %td group a
+        %td will be
+      %tr
+        %td 212607_at
+        %td group b
+        %td ignored
+      %tr
+        %td 208727_s_at
+        %td group b
+      %tr
+        %td 10235
+        %td group c
+      %tr
+        %td 10454
+        %td group c
+
+
+  %h2 Supported Gene ID Formats
+  %p 
+    We support the following:
+    %ul
+      %li KEGG id
+      %li NCBI Entrez gene id
+      %li 
+        and the following Affymetrix probsets
+        %ul
+          %li Human Genome U133 Plus 2.0 Array (Human)
+          %li Bovine Genome Array (Cow)
+          %li Canine Genome 2.0 Array (Dog)
+          %li Drosophila Genome 2.0 Array (Fruit Fly)
+          %li Murine Genome U74v2 Set (Mouse)
+          %li Rat Genome U34 Set (Rat)
+
+  %h2 Supported Signaling Pathways
+  %p
+    %ul
+      %li Two-component
+      %li MAPK
+      %li ErbB
+      %li Wnt
+      %li Notch
+      %li Hedgehong
+      %li TGF-beta
+      %li VEGF
+      %li Jak-STAT
+      %li Calcium
+      %li Phosphatidylinositol
+      %li mTOR
+
+  %h2 Supported Species
+  %p
+    %ul
+      %li Homo sapiens (Human)
+      %li Pan troglodytes (Chimpanzee)
+      %li Macaca mulatta (Rhesus Monkey)
+      %li Mus musculus (Mouse)
+      %li Rattus norvegicus (Rat)
+      %li Canis familiaris (Dog)
+      %li Bos taurus (Cow)
+      %li Sus scrofa (Pig)
+      %li Monodelphis domestica (Opossum)
+      %li Drosophila melanogaster (Fruit Fly)
+
+
+- content_for :sidebar do
+  =link_to "Start a New Run", :controller => :runs, :action => :new
