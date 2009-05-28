@@ -17,8 +17,9 @@ class RunsController < ApplicationController
     run = Run.new
     run.file = params[:file]
     run.save
+    
     run.process
-    # Bj.submit run.job_command, :tag => run.id.to_s, :is_restartable => 0
+    
     redirect_to run
   end
 

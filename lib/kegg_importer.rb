@@ -15,6 +15,7 @@ class KeggImporter
     # puts "starting import..."
     create_species
     Species.find(:all).each do |species|
+      p species
       get_pathways_for species
       get_ncbi_ids_for species
     end

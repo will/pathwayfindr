@@ -59,7 +59,7 @@ class Run < ActiveRecord::Base
     
     marked_pathways.each do |mp|
       results.create :pathway => mp.pathway,
-                         :genes => mp.genes.map(&:gene)
+                     :genes => mp.genes.map(&:gene)
     end
     
     save
