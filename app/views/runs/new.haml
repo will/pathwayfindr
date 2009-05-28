@@ -1,0 +1,15 @@
+%h2 Upload File
+- form_tag({:action => "create"}, :multipart => true) do 
+  = file_field_tag :file
+  %br
+  = submit_tag "Submit", :disabled => false, :disable_with => "Please wait..."
+  -if flash[:warning]
+    %p{:style => "margin-top: 20px;"}
+      %span.warning= flash[:warning]
+
+- content_for :sidebar do
+  %p#tagline Pathwayfindr highlights <strong>genes</strong> inside of <strong>cellular signaling pathways</strong>.
+  %hr{:width=> "200px"}
+  %p File should be a <strong>tab separated file</strong> with the first column a <strong>gene id</strong>, and the second column a <strong>group</strong>. Extra columns are ignored.
+  %p Gene ids can be KEGG ids, NCBI Entrez Gene ids, or Affymetrix probesets.
+  %p Try a <a href="/sample_pathwayfindr.tsv">sample file</a> or read the <a href="/about">manual</a>.

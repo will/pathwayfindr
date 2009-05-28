@@ -1,0 +1,11 @@
+#results
+  - @run.results.each do |result|
+    .result
+      %h4= result.pathway.definition
+      -# <a href="#{result.url}" target="_new"><img src="#{result.url}" width="700px"></a>
+      %ul.genelist
+        - result.genes.each do |gene|
+          %li
+            =link_to "[kegg]", {}, :href=>"http://www.genome.jp/dbget-bin/www_bget?#{gene.entry_id}", :popup => true
+            =link_to "[ncbi]", {}, :href=>"http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=#{gene.ncbi_id}", :popup => true
+            =gene.entry_id

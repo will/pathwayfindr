@@ -1,0 +1,10 @@
+#sidebar
+  - unless @job_failed
+    %h3= pluralize @run.gene_count, "Gene"
+    %h3= pluralize @run.pathway_count, "Pathway"
+    %table.groups
+      %tr
+        %td#header Group Colors
+      -@run.get_groups_and_colors.each do |pair|
+        %tr
+          %td{:bgcolor => pair.last, :width => "10px"}= pair.first

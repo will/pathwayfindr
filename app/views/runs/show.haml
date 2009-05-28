@@ -1,0 +1,21 @@
+%h2 Results
+
+%table.genelist
+  %tr
+    %th gene
+    %td pathways
+  - @run.genes.each do |gene,results|
+    %tr
+      %th{:align=>"right"}=gene.entry_id
+      - results.each do |result|
+        %td=result.pathway.entry_id #definition.scan(/(.*) signal.*/)
+        
+    
+=# render :partial => "progress"
+=render :partial => "results"
+=render :partial => "error"
+
+- content_for :sidebar do
+  =link_to "Start a New Run", :action => :new
+  %p <br />Click on the images to enlarge
+  =render :partial => "sidebar"
