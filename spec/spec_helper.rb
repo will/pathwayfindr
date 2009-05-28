@@ -5,6 +5,25 @@ require File.dirname(__FILE__) + "/../config/environment" unless defined?(RAILS_
 require 'spec/autorun'
 require 'spec/rails'
 
+class NilClass
+  def should_receive(*args)
+    raise "WARNING: you tried to add expectations to nil!"
+  end
+  alias :stub! :should_receive
+end
+
+class Array
+  def to_test_file(filename = "test_file")
+    File.open("tmp/#{filename}", "w") do |f|
+      self.each do |line|
+        f << line.join("\t")+"\n"
+      end
+    end
+    "tmp/#{filename}"
+  end
+end
+
+
 Spec::Runner.configure do |config|
   # If you're not using ActiveRecord you should remove these
   # lines, delete config/database.yml and disable :active_record
