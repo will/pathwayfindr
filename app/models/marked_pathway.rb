@@ -12,15 +12,15 @@ class MarkedPathway
   end
   
   def gene_list
-    @genes.andand.inject([]) { |acc, gene| acc << gene.entry_id }
+    @genes.inject([]) { |acc, gene| acc << gene.entry_id }
   end
   
   def bg_colors
-    @genes.andand.inject([]) { |acc, gene| acc << gene.bg_color }
+    @genes.inject([]) { |acc, gene| acc << gene.bg_color }
   end
   
   def fg_colors
-    @genes.andand.inject([]) { |acc, gene| acc << gene.fg_color }
+    @genes.inject([]) { |acc, gene| acc << gene.fg_color }
   end
   
   def get_image_url
