@@ -28,19 +28,6 @@ class RunsController < ApplicationController
     redirect_to :action => :new and return unless @run
     # @job = Bj.list.find{|j| j.tag == @run.id.to_s }
     @job_failed = false #job_failed @job
-    
-    respond_to do |wants|
-      wants.html
-      wants.js do
-        render(:update) do |page|
-          page['progress'].reload
-          page['results'].reload
-          page['sidebar'].reload
-          page['error'].reload
-          page << "reload=false;" if @job.state=="finished"
-        end
-      end
-    end
   end
   
   private

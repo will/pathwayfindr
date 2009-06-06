@@ -1,5 +1,0 @@
-#progress
-  %h2= "Status: #{@job.state.titlecase} #{spinner}"
-  - unless percent_done == "100%" || @job_failed
-    %p= progress_bar
-    %h3= "#{percent_done} done"
