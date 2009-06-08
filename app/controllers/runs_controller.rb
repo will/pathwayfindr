@@ -26,8 +26,6 @@ class RunsController < ApplicationController
   def show
     @run = Run.find_by_id params[:id]
     redirect_to :action => :new and return unless @run
-    # @job = Bj.list.find{|j| j.tag == @run.id.to_s }
-    @job_failed = false #job_failed @job
   end
   
   private

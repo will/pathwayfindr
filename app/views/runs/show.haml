@@ -8,10 +8,9 @@
     %tr
       %th{:align=>"right"}=gene.entry_id
       - results.each do |result|
-        %td=result.pathway.entry_id #definition.scan(/(.*) signal.*/)
+        %td=result.pathway.entry_id
         
 =render :partial => "results"
-=render :partial => "error"
 
 - content_for :sidebar do
   =link_to "Start a New Run", :action => :new
