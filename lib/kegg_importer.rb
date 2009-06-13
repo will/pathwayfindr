@@ -10,15 +10,25 @@ class KeggImporter
   end
   
   def update
-    # puts "clearing old information"
+    puts "clearing old information"
     clear
-    # puts "starting import..."
+    puts "starting import..."
     create_species
+    all_species = Species.find(:all)
+    
+    puts "#{all_species.size} species to import"
+    progress = Progress.new(all_species.size, 1)
+    
     Species.find(:all).each do |species|
-      p species
+      puts "\n\n"
+      puts species.definition
+      
       get_pathways_for species
       get_ncbi_ids_for species
+      
+      progress.tick
     end
+    puts "adding affy probesets..."
     add_affy_probesets
   end
   
